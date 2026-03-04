@@ -14,3 +14,7 @@ inp2 = int(input("Enter the second number : "))
 operation = input("Enter the operation need to be done : ")
 result = calc(inp1, inp2, operation)
 print("The result is ", result)
+
+
+# 10 + 25 = 35
+# 35 + 5= 40 +10 = 50 + 25 =75 + 11 = 86 + 12 =98 q result 98
