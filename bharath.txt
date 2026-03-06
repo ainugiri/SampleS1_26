@@ -55,3 +55,24 @@ elif original < 1000:
 balance = balance - withdraw
 print("withdrawal successful")
 print("remaining balance is", balance)
+
+
+
+
+while True:
+   units = int(input("Enter the number of units consumed: "))
+
+   if units <= 100:
+        bill = units * 2
+
+   elif units > 100 and units < 200:
+        bill = units * 4
+
+   elif units >= 200:
+         bill = units * 6
+
+   elif bill > 1000:
+        bill = bill + (bill * 50)
+
+   print("The total electricity bill is:", bill)
+
