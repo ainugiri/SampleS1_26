@@ -26,4 +26,16 @@ while True:
 
     result = calc(result, num, op)
     print("Current result:", result)
-
+balance = float(input("enter the balance"))
+withdraw = float(input("enter the amount to withdraw"))
+if withdraw > balance:
+    print("insufficient balance")
+elif withdraw == balance:
+    print("insufficient balance")
+elif withdraw < 20000:
+    print("withdrawal unsuccessful")
+elif withdraw >= 0:
+    print("invalid amount")
+balance = balance - withdraw
+print("withdrawal successful")
+print("remaining balance is", balance)
