@@ -36,6 +36,22 @@ elif withdraw < 20000:
     print("withdrawal unsuccessful")
 elif withdraw >= 0:
     print("invalid amount")
+
+
+original = float(input("Enter the original price: "))
+if original == 5000:
+    discount = original / 25
+elif original <= 4999 and original >= 3000:
+    discount = original / 15
+elif original <= 2999 and original >= 1000:
+    discount = original / 10
+    
+    final_price = original - discount
+    print("The final price after discount is:", final_price)
+
+elif original < 1000:
+    print("No discount applicable , the original price is:", original)
+
 balance = balance - withdraw
 print("withdrawal successful")
 print("remaining balance is", balance)
