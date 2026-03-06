@@ -1,2 +1,29 @@
 my name is Bharath
 date = 25/02/2026
+
+def calc(x, y, op):
+    if op == "+":
+        return x + y
+    elif op == "-":
+        return x - y
+    elif op == "*":
+        return x * y
+    elif op == "/":
+            return x / y
+        else:
+            print("Cannot divide by zero")
+            return x
+    else:
+        print("Invalid operation")
+        return x
+
+
+result = float(input("Enter the first number: "))
+
+while True:
+    op = input("Enter operation (+, -, *, /): ")
+    num = float(input("Enter next number: "))
+
+    result = calc(result, num, op)
+    print("Current result:", result)
+
