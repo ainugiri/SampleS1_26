@@ -56,7 +56,19 @@ print(f"Pass: {student['result']}")
 # Write a Python program that:
 
 # Stores the library name (string).
+library_name="city central library"
 
 # Stores a list of books available.
+books=("tamil","english","maths","science")
 
 # Stores book availability status using a dictionary.
+book_status={
+    "Tamil":True,
+    "English":False,
+    "Maths":True,
+    "Science":False,
+}
+print("library name:",library_name)
+print("books_status:",books)
+print("books availability status")
+
