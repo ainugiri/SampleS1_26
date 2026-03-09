@@ -71,4 +71,72 @@ book_status={
 print("library name:",library_name)
 print("books_status:",books)
 print("books availability status")
+ 
+def calc(x, y, op):
+    if op == "+":
+        return x + y
+    elif op == "-":
+        return x - y
+    elif op == "*":
+        return x * y
+    elif op == "/":
+        if y != 0:
+            return x / y
+        else:
+            return "Cannot divide by zero"
+    else:
+        return "Invalid operation"
+
+while True:
+    inp1 = int(input("Enter the first number: "))
+    inp2 = int(input("Enter the second number: "))
+    operation = input("Enter the operation (+, -, *, /): ")
+
+    result = calc(inp1, inp2, operation)
+    print("The result is:", result)
+
+    choice = input("Do you want to continue? (yes/no): ")
+    if choice.lower() != "yes":
+        print("Calculator stopped.")
+        break
+
+while True:
+    amount=int(input("enter the amount:"))
+    if(amount>=5000):
+        discount=(25/100*amount)
+    elif(amount>=3000):
+        discount=(15/100*amount)
+    elif(amount>=1000):
+        discount=(10/100*amount)
+    else:
+        discount=0
+    print("original amount:",amount)
+    print("discount amount:",discount)
+    final=amount-discount
+    print("final payable amount:",final)
+
+
+balance = float(input("Enter your account balance: "))
+withdraw_amount = float(input("Enter withdrawal amount: "))
+if withdraw_amount > balance:
+    print("Error: Insufficient balance.")
+elif withdraw_amount > 20000:
+    print("Error: Withdrawal limit per transaction is ₹20,000.")
+else:
+    balance = balance - withdraw_amount
+    print("Withdrawal successful.")
+    print("Remaining balance:", balance)
+
+units = int(input("Enter units: "))
+if units <= 100:
+    bill = units * 2
+elif units <= 200:
+    bill = 100*2 + (units-100)*4
+else:
+    bill = 100*2 + 100*4 + (units-200)*6
+
+if bill > 1000:
+    bill += bill * 0.05
+
+print("Final Electricity Bill: ₹", bill)
 
